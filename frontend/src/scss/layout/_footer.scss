@@ -1,0 +1,30 @@
+@use '../base/mixins' as m;
+@use'../base/variables' as v;
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-color: v.$color_principal;
+    text-align: center;
+    height: 4rem;
+    font-size: 1.6rem;
+    @include m.w-telefono{
+    
+        height: 5rem;
+    }/*
+    @include m.w-tablet{
+        height: 4rem;
+    }*/
+
+    @include m.w-desktop{
+        height: 5rem;
+    }
+}
+
+.disclaimer{
+    font-style: italic;
+    font-size: 1.2rem;
+}

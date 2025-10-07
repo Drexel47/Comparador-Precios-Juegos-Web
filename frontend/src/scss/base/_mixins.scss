@@ -1,0 +1,19 @@
+@use 'variables' as v;
+
+@mixin w-telefono {
+  @media (max-width: #{v.$telefono}) {
+    @content;
+  }
+}
+
+@mixin w-tablet {
+  @media (min-width: #{(v.$telefono + 1px)}) and (max-width: #{v.$tablet}) {
+    @content;
+  }
+}
+
+@mixin w-desktop {
+  @media (min-width: #{(v.$tablet + 1px)}) {
+    @content;
+  }
+}
