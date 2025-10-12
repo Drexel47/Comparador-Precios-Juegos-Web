@@ -348,14 +348,6 @@ template {
   margin: 0;
 }
 
-@media (max-width: 480px) {
-  .buscar-juego > input {
-    margin: 0 1%;
-    width: 95%;
-    height: 2rem;
-  }
-}
-
 main {
   min-height: 100vh;
   width: 75%;
@@ -374,6 +366,7 @@ main {
 
 section {
   margin: 1rem 0;
+  background-color: white;
 }
 section h2 {
   margin: 0;
@@ -418,6 +411,13 @@ section h2 {
   border-radius: 0.5rem 0.5rem 0 0;
   width: auto;
 }
+@media (max-width: 480px) {
+  .juegos-recomendados-header,
+  .buscar-juego-header,
+  .comparacion-precios-header {
+    border-radius: 0;
+  }
+}
 .juegos-recomendados-header h2,
 .buscar-juego-header h2,
 .comparacion-precios-header h2 {
@@ -426,24 +426,33 @@ section h2 {
 }
 
 .buscar-juego-header {
-  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  min-height: 4rem;
+}
+@media (max-width: 480px) {
+  .buscar-juego-header {
+    flex-direction: column;
+  }
 }
 @media (max-width: 480px) {
   .buscar-juego-header h2 {
-    width: 20%;
+    width: auto;
   }
 }
 .buscar-juego-header input {
-  height: 70%;
+  width: 90%;
+  margin: 0 auto;
 }
 @media (max-width: 480px) {
   .buscar-juego-header input {
-    width: 75%;
+    width: 100%;
+    margin: 1rem 0;
   }
 }
 @media (min-width: 481px) and (max-width: 834px) {
   .buscar-juego-header input {
-    width: 85%;
+    width: 95%;
   }
 }
 @media (min-width: 835px) {
@@ -454,10 +463,121 @@ section h2 {
 .buscar-juego-header input[placeholder] {
   font-size: 1.6rem;
 }
+.buscar-juego-titulo {
+  width: auto;
+}
 @media (max-width: 480px) {
   .buscar-juego-titulo {
     text-align: center;
+    width: 100%;
   }
+}
+.buscar-juego-input {
+  width: 70%;
+}
+@media (max-width: 480px) {
+  .buscar-juego-input {
+    width: 90%;
+  }
+}
+
+.sobre-nosotros {
+  display: flex;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+@media (max-width: 480px) {
+  .sobre-nosotros {
+    font-size: 2rem;
+    flex-direction: column;
+  }
+}
+
+.disclaimer {
+  flex-grow: 1;
+  margin: 1rem;
+}
+.disclaimer-text {
+  display: block;
+  width: 30%;
+}
+@media (max-width: 480px) {
+  .disclaimer-text {
+    width: 100%;
+  }
+}
+
+.contacto {
+  flex-grow: 2;
+  font-size: 1.4rem;
+}
+
+.Titulo-2 {
+  font-size: 1.8rem;
+}
+
+.grafico-precios {
+  min-height: 20rem;
+}
+
+.rechart {
+  min-height: 15rem;
+  min-width: 40%;
+}
+@media (max-width: 480px) {
+  .rechart {
+    max-width: 90%;
+  }
+}
+
+.comparacion-precios-detalle {
+  display: flex;
+  flex-direction: column;
+}
+.comparacion-precios-grafico {
+  display: flex;
+}
+@media (max-width: 480px) {
+  .comparacion-precios-grafico {
+    flex-direction: column;
+  }
+}
+.comparacion-precios-grafico .tabla-precios {
+  width: 40%;
+}
+@media (max-width: 480px) {
+  .comparacion-precios-grafico .tabla-precios {
+    width: 100%;
+  }
+  .comparacion-precios-grafico .tabla-precios table {
+    margin: 0 auto;
+  }
+}
+
+.mejor-precio {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.6rem 0;
+}
+
+.comparacion-precios-grafico .tabla-precios {
+  width: 50%;
+}
+.comparacion-precios-grafico .tabla-precios table {
+  padding: 0 2rem;
+}
+.comparacion-precios-grafico .tabla-precios table th {
+  font-size: 1.6rem;
+}
+.comparacion-precios-grafico .tabla-precios table td {
+  font-size: 1.4rem;
+}
+
+.juego-seleccionado {
+  text-align: center;
+}
+.juego-seleccionado h3 {
+  font-size: 2rem;
 }
 
 html {

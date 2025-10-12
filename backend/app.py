@@ -12,14 +12,14 @@ def get_connection():
         conn = mysql.connector.connect(**MYSQL_CONFIG)
         return conn
     except Error as e:
-        print(f"Error connecting to MySQL: {e}")
+        print(f"Hubo problemas al conectar a la base de datos: {e}")
         return None
 
 @app.route('/api/games')
 def list_games():
     conn = get_connection()
     if not conn:
-        return jsonify({'error':'DB connection failed'}), 500
+        return jsonify({'error':'Conexión fallida con la base de datos.'}), 500
     cur = conn.cursor(dictionary=True)
     cur.execute('SELECT id, nombre, slug FROM juegos ORDER BY nombre')
     data = cur.fetchall()

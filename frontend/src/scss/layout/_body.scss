@@ -1,21 +1,6 @@
 @use '../base/mixins' as m;
 @use'../base/variables' as v;
-.buscar-juego{
 
-
-    
-
-    &>input{
-
-        @include m.w-telefono{
-            margin: 0 1%;
-            width: 95%;
-            height: 2rem;
-        }
-
-        
-    }
-}
 
 main{
     min-height: 100vh;
@@ -32,6 +17,7 @@ main{
 
 section{
     margin: 1rem 0;
+    background-color: white;
     h2
     {
         margin: 0;
@@ -78,6 +64,9 @@ section{
         background-color:  v.$color_principal;
         
         gap: 1rem;
+        @include m.w-telefono{
+            border-radius: 0;
+        }
         border-radius: 0.5rem 0.5rem 0 0;
         width: auto;
         h2{
@@ -88,20 +77,27 @@ section{
 }
 .buscar-juego{
     &-header{
-        height: 4rem;
+        display: flex;
+        flex-direction: row;
+        min-height: 4rem;
+        @include m.w-telefono{
+            flex-direction: column;
+        }
         h2{
             @include m.w-telefono{
-                width: 20%;
+                
+                width: auto;
             }
         }
         input{
-            height: 70%;
-            
+            width: 90%;
+            margin: 0 auto;
             @include m.w-telefono{
-                width: 75%;
+                width: 100%;
+                margin: 1rem 0;
             }
             @include m.w-tablet{
-                width: 85%;
+                width: 95%;
             }
             @include m.w-desktop{
                 width: 90%;
@@ -113,10 +109,124 @@ section{
     }
     &-titulo{
         
-
+        width: auto;
         @include m.w-telefono{
             text-align: center;
+            width: 100%;
+        }
+    }
+
+    &-input{
+        width: 70%;
+        @include m.w-telefono{
+            
+            width: 90%;
         }
     }
 }
 
+.sobre-nosotros{
+    display: flex;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    @include m.w-telefono{
+        font-size: 2rem;
+        flex-direction: column;
+    }
+    
+}
+
+.disclaimer{
+    flex-grow: 1;
+    margin: 1rem;
+    &-text{
+        display: block;
+        @include m.w-telefono{
+            
+            width: 100%;
+        }
+
+        width: 30%;;
+    }
+}
+.contacto
+{
+    flex-grow: 2;
+    font-size: 1.4rem;
+}
+.Titulo-2{
+    font-size: 1.8rem;;
+}
+
+.grafico-precios{
+    min-height: 20rem;
+}
+
+.rechart{
+    min-height: 15rem;
+    min-width: 40%;
+
+    @include m.w-telefono{
+       max-width: 90%;
+    }
+    
+}
+
+.comparacion-precios{
+
+    &-detalle{
+        display: flex;
+        flex-direction: column;
+    }
+    &-grafico{
+        display: flex;
+        @include m.w-telefono{
+            flex-direction: column;
+        }
+
+        .tabla-precios{
+            width: 40%;
+
+            @include m.w-telefono{
+                width: 100%;
+                
+                table{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.mejor-precio{
+
+    font-size: 2rem;
+    text-align: center;
+    margin: 1.6rem 0;
+}
+
+.comparacion-precios-grafico{
+
+    .tabla-precios{
+
+        width: 50%;
+        table{
+            padding: 0 2rem;
+
+            th{
+                font-size: 1.6rem;
+            }
+            td{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.juego-seleccionado{
+    text-align: center;
+
+    h3{
+        font-size: 2rem;
+    }
+}
