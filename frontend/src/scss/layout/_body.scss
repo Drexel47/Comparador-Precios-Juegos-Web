@@ -15,6 +15,30 @@ main{
     }
 }
 
+.main{
+    display: grid;
+    grid-template-areas: 
+    "juegos-recomendados"
+    "buscar-juego"
+    "comparacion-precios"
+    "sobre-nosotros"; 
+}
+
+
+.juegos-recomendados
+{
+    grid-area: juegos-recomendados;
+}
+
+.buscar-juego{
+    grid-area: buscar-juego;
+}
+.comparacion-precios{
+    grid-area: comparacion-precios;
+}
+.sobre-nosotros{
+    grid-area: sobre-nosotros;
+}
 section{
     margin: 1rem 0;
     background-color: white;
@@ -228,5 +252,10 @@ section{
 
     h3{
         font-size: 2rem;
+    }
+
+    img{
+        width: 50%;
+        height: 50%;
     }
 }

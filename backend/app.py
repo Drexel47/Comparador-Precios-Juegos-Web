@@ -15,6 +15,8 @@ def get_connection():
         print(f"Hubo problemas al conectar a la base de datos: {e}")
         return None
 
+
+
 @app.route('/api/games')
 def list_games():
     conn = get_connection()

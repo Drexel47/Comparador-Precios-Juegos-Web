@@ -52,7 +52,7 @@ function App() {
           <h1>Comparador de Precios (Chile)</h1>
           <p className="">Comparador de precios - datos desde Steam, Epic y otras tiendas.</p>
         </header>
-        <main className="">
+        <main className="main">
           <section className='juegos-recomendados'>
             <div className='juegos-recomendados-header'>
               <h2>Recomendados</h2>
@@ -107,8 +107,14 @@ function App() {
             </div>
 
             {/* Info del juego seleccionado */}
+            {!selectedGame && (
+              <div className='juego-seleccionado'>
+                <h3>Debes escribir en la barra de búsqueda el juego a cotizar.</h3>
+              </div>
+            )}
             {selectedGame && (
               <div className="juego-seleccionado">
+                <img className='juego-seleccionado-cover' alt='juego-cover'></img>
                 <h3 className="text-lg font-semibold mb-2">
                   {games.find(g => g.id === selectedGame)?.nombre}
                 </h3>
@@ -132,14 +138,15 @@ function App() {
               </div>
             )}
           </section>
-
+    
+          
           {selectedGame &&(
             <section className='comparacion-precios'>
             <div className='comparacion-precios-header'>
               <h2>Comparación</h2>
             </div>
 
-            {!selectedGame && <div>Selecciona un juego para ver los precios.</div>}
+            
 
             {selectedGame && (
               <div className="comparacion-precios-detalle">
