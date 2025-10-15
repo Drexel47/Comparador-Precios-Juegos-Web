@@ -340,6 +340,7 @@ template {
 }
 
 .header {
+  background-color: #062A34;
   color: white;
   text-align: center;
   font-size: 3.2rem;
@@ -621,6 +622,13 @@ section h2 {
 .sobre-nosotros {
   background-color: #062A34;
   color: #f2fbfd;
+}
+
+.test-txt {
+  font-family: "Montserrat", "sans-serif";
+  background-color: #F5B661;
+  color: white;
+  font-size: 1.6rem;
 }
 
 html {

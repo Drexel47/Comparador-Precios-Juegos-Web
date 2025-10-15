@@ -2,6 +2,7 @@
 @use'../base/variables' as v;
 
 .header{
+    background-color: v.$color_bsec;
     color:white;
     text-align: center;
     font-size: 3.2rem;
