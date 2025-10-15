@@ -1,0 +1,269 @@
+@use '../base/mixins' as m;
+@use'../base/variables' as v;
+
+
+main{
+    min-height: 100vh;
+    width: 75%;
+    margin: 0 auto;
+
+    @include m.w-telefono{
+        width: 100%;
+    }
+    @include m.w-tablet{
+        width: 100%;
+    }
+}
+
+.main{
+    display: grid;
+    grid-template-areas: 
+    "juegos-recomendados"
+    "buscar-juego"
+    "comparacion-precios"
+    "sobre-nosotros"; 
+}
+
+
+.juegos-recomendados
+{
+    grid-area: juegos-recomendados;
+}
+
+.buscar-juego{
+    grid-area: buscar-juego;
+}
+.comparacion-precios{
+    grid-area: comparacion-precios;
+}
+.sobre-nosotros{
+    grid-area: sobre-nosotros;
+}
+section{
+    margin: 1rem 0;
+    background-color: v.$color_terciario;
+    font-family: "Montserrat", "sans-serif";
+
+    h2
+    {
+        font-size: v.$titulo_seccion;
+        margin: 0;
+        color: white;
+    }
+}
+.juegos-recomendados,
+.buscar-juego,
+.comparacion-precios{
+
+    
+    border-radius: 0;
+    border: 0;
+    
+    @include m.w-desktop{
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    }
+}
+
+/*.juegos-recomendados,
+.comparacion-precios{
+    
+    h2{
+        padding-left: 1rem;
+        font-size: 2.6rem;
+        color: white;
+        width: auto;
+        background-color: v.$color_principal;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+}*/
+
+.juegos-recomendados,
+.buscar-juego,
+.comparacion-precios{
+    
+
+    &-header{
+        display: flex;
+        align-items: center;
+        
+        width: 100%;
+        background-color:  v.$color_principal;
+        
+        gap: 1rem;
+        @include m.w-telefono{
+            border-radius: 0;
+        }
+        border-radius: 0.5rem 0.5rem 0 0;
+        width: auto;
+        h2{
+            padding-left: 1rem;
+            font-size: 2.6rem;
+        }
+    }
+}
+.buscar-juego{
+    &-header{
+        display: flex;
+        flex-direction: row;
+        min-height: 4rem;
+        @include m.w-telefono{
+            flex-direction: column;
+        }
+        h2{
+            @include m.w-telefono{
+                
+                width: auto;
+            }
+        }
+        input{
+            width: 90%;
+            margin: 0 auto;
+            @include m.w-telefono{
+                width: 100%;
+                margin: 1rem 0;
+            }
+            @include m.w-tablet{
+                width: 95%;
+            }
+            @include m.w-desktop{
+                width: 90%;
+            }
+            &[placeholder]{
+                font-size: 1.6rem;
+            }
+        }
+    }
+    &-titulo{
+        
+        width: auto;
+        @include m.w-telefono{
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &-input{
+        width: 70%;
+        @include m.w-telefono{
+            
+            width: 90%;
+        }
+    }
+}
+
+.sobre-nosotros{
+    display: flex;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    @include m.w-telefono{
+        font-size: 2rem;
+        flex-direction: column;
+    }
+    
+}
+
+.disclaimer{
+    flex-grow: 1;
+    margin: 1rem;
+    &-text{
+        display: block;
+        @include m.w-telefono{
+            
+            width: 100%;
+        }
+
+        width: 30%;;
+    }
+}
+.contacto
+{
+    flex-grow: 2;
+    font-size: 1.4rem;
+}
+.Titulo-2{
+    font-size: 1.8rem;;
+}
+
+.grafico-precios{
+    min-height: 20rem;
+}
+
+.rechart{
+    min-height: 15rem;
+    min-width: 40%;
+
+    @include m.w-telefono{
+       max-width: 90%;
+    }
+    
+}
+
+.comparacion-precios{
+
+    &-detalle{
+        display: flex;
+        flex-direction: column;
+    }
+    &-grafico{
+        display: flex;
+        @include m.w-telefono{
+            flex-direction: column;
+        }
+
+        .tabla-precios{
+            width: 40%;
+
+            @include m.w-telefono{
+                width: 100%;
+                
+                table{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.mejor-precio{
+
+    font-size: 2rem;
+    text-align: center;
+    margin: 1.6rem 0;
+}
+
+.comparacion-precios-grafico{
+
+    .tabla-precios{
+
+        width: 50%;
+        table{
+            padding: 0 2rem;
+
+            th{
+                font-size: 1.6rem;
+            }
+            td{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.juego-seleccionado{
+    text-align: center;
+
+    h3{
+        font-size: 2rem;
+    }
+
+    img{
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.sobre-nosotros{
+    background-color: v.$color_bsec;
+    color: v.$color_fuente;
+}

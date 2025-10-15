@@ -1,0 +1,34 @@
+@use '../base/mixins' as m;
+@use'../base/variables' as v;
+
+//Reconocer 1 Rem = 10px
+html {
+    font-size: 62.5%;
+    box-sizing:  border-box; /*Hack para box model*/
+    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.color-principal{
+    background-color: v.$color_principal;
+}
+#root{
+    background-color: v.$color_secundario;
+    @include m.w-telefono{
+    
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
