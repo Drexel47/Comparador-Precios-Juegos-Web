@@ -524,6 +524,9 @@ section h2 {
 }
 .disclaimer-text {
   display: block;
+  margin: 2rem;
+  font-size: 1.6rem;
+  font-style: oblique;
   width: 30%;
 }
 @media (max-width: 480px) {
@@ -534,7 +537,13 @@ section h2 {
 
 .contacto {
   flex-grow: 2;
-  font-size: 1.4rem;
+}
+.contacto h4 {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 2rem;
+}
+.contacto p {
+  font-size: 1.6rem;
 }
 
 .Titulo-2 {

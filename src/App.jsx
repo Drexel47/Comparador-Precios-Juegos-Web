@@ -48,7 +48,7 @@ function App() {
       <div>
         <header className="header color-principal">
           <h1>Comparador de Precios (Chile)</h1>
-          <p className="">Comparador de precios - datos desde Steam, Epic y otras tiendas.</p>
+          <p className="">Comparador de precios - datos desde Steam, Epic y otras tiendas. <strong>(Versión de Pruebas)</strong></p>
         </header>
         <main className="main">
           <section className='juegos-recomendados'>
