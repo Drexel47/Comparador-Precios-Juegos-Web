@@ -47,10 +47,17 @@ function App() {
     return(
       <div>
         <header className="header">
-          <h1>Comparador de Precios (Chile)</h1>
-          <p className="">Comparador de precios - datos desde Steam, Epic y otras tiendas. </p>
-          <p className="test-txt"><strong>(Versión de Pruebas)</strong></p>
+          <div className="header-titulo">
+            <h1>Comparador de Precios (Chile)</h1>
+          </div>
+          <div className="header-subtitulo">
+            <span className="header-subtitulo-texto">Aquí encontraras el precio de los juegos entre las diversas tiendas (Steam, Epic, entre otros). </span>
+          </div>
+          <div className="test-txt">
+            <span>(Versión de <strong>Pruebas</strong>)</span>
+          </div>
         </header>
+        
         <main className="main">
           <section className='juegos-recomendados'>
             <div className='juegos-recomendados-header'>
@@ -108,6 +115,7 @@ function App() {
             {/* Info del juego seleccionado */}
             {!selectedGame && (
               <div className='juego-seleccionado'>
+                <img loading="lazy" className="warning-icon" src="./public/warning.png"></img>
                 <h3>Debes escribir en la barra de búsqueda el juego a cotizar.</h3>
               </div>
             )}
@@ -252,6 +260,14 @@ function App() {
           <section className= "sobre-nosotros">
               <div className="disclaimer">
                 <span className="disclaimer-text">**Datos recolectados de APIs de terceros. No afiliado a Steam/Epic ni los distribuidores mostrados. Los precios pueden variar según el cambio de moneda.</span>
+              </div>
+              <div className= "rrss">
+                <h4 className= "Titulo-2"> Nuestras Redes</h4>
+                <ul>
+                  <li>
+                    <img loading="lazy" className="rrss_img" alt="yt_icon" src="./public/youtube_icon.png"></img>
+                  </li>
+                </ul>
               </div>
               <div className="contacto">
                 <h4 className="Titulo-2">Contacto</h4>

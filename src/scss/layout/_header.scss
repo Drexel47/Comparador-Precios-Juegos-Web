@@ -8,7 +8,31 @@
     font-size: 3.2rem;
     h1{
         margin: 0;
+        padding: 2rem;
         font-family: "Montserrat", sans-serif;
         font-size: v.$titulo_gral;
     }
+
+    &-subtitulo{
+        padding: 1rem 0;
+        margin: 0 auto;
+        font-size: 2rem;
+        font-family: "Montserrat", "sans-serif";
+        background-color: v.$color_bsec1;
+
+
+        overflow: hidden; /* Oculta el texto que se sale del contenedor */
+        white-space: nowrap; /* Evita que el texto salte de línea */
+        width: 75%; /* Ancho del contenedor */
+        //border: 0.1rem solid black; /* Para visualización */
+        
+        &-texto
+        {
+            display: inline-block;
+            animation: mover-texto 20s linear infinite; /* 5s es la duración, puedes ajustarla */
+        }
+    
+    }
 }
+
+

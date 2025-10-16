@@ -1,0 +1,15 @@
+@keyframes zoom-1 {
+  0% {
+	transform: scale(1.0);
+  }
+
+  100% {
+	transform: scale(1.2);
+  }
+}
+
+
+@keyframes mover-texto {
+  0% { transform: translateX(105%); } /* Empieza a la derecha del contenedor */
+  100% { transform: translateX(-130%); } /* Se mueve a la izquierda hasta desaparecer */
+}

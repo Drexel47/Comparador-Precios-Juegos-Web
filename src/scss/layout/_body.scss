@@ -1,5 +1,6 @@
 @use '../base/mixins' as m;
 @use'../base/variables' as v;
+@use '../base/keyframes' as k;
 
 
 main{
@@ -43,6 +44,8 @@ section{
     margin: 1rem 0;
     background-color: v.$color_terciario;
     font-family: "Montserrat", "sans-serif";
+
+    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.39);
 
     h2
     {
@@ -164,7 +167,7 @@ section{
 }
 
 .disclaimer{
-    flex-grow: 1;
+    max-width: 30%;
     margin: 1rem;
     &-text{
         display: block;
@@ -177,12 +180,13 @@ section{
             width: 100%;
         }
 
-        width: 30%;;
+        
     }
 }
 .contacto
 {
-    flex-grow: 2;
+    
+    width: 40%;
     h4{
         font-family: "Montserrat", "sans-serif";
         font-size: 2rem;
@@ -265,17 +269,33 @@ section{
 
     h3{
         font-size: 2rem;
+
+        margin: 1rem auto;
+
+        color: v.$color_fuente;
+        font-family: "Montserrat", "sans-serif";
+        text-shadow: v.$txt_shadow1
     }
 
+    .warning-icon{
+        margin-top: 1rem;
+        width: 3rem;
+        height: 3rem;
+    }
     img{
         width: 50%;
         height: 50%;
+
+        
     }
 }
 
 .sobre-nosotros{
     background-color: v.$color_bsec;
     color: v.$color_fuente;
+    h4{
+        margin-top: 2rem;
+    }
 }
 
 .test-txt{
@@ -284,3 +304,22 @@ section{
     color: white;
     font-size: 1.6rem;
 }
+
+.rrss{
+    width: 30%;
+    ul{
+        display: flex;
+    }
+    img{
+        width: 4rem;
+        height: 4rem;
+
+        &:hover{
+            cursor: pointer;
+            animation: zoom-1 2s ease-out 0s 1 normal none;
+        }
+        
+    }
+        
+}
+
