@@ -115,7 +115,7 @@ function App() {
             {/* Info del juego seleccionado */}
             {!selectedGame && (
               <div className='juego-seleccionado'>
-                <img loading="lazy" className="warning-icon" src="./public/warning.png"></img>
+                <img loading="lazy" className="warning-icon" src="/warning.png"></img>
                 <h3>Debes escribir en la barra de búsqueda el juego a cotizar.</h3>
               </div>
             )}
@@ -265,7 +265,7 @@ function App() {
                 <h4 className= "Titulo-2"> Nuestras Redes</h4>
                 <ul>
                   <li>
-                    <img loading="lazy" className="rrss_img" alt="yt_icon" src="./public/youtube_icon.png"></img>
+                    <img loading="lazy" className="rrss_img" alt="yt_icon" src="/youtube_icon.png"></img>
                   </li>
                 </ul>
               </div>
