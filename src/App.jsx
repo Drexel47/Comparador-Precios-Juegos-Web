@@ -38,14 +38,14 @@ function App() {
     useEffect(() => {
       if (query.trim() === '') {
         setSelectedGame(null);
-        setPrices([]); // opcional, limpia la tabla y el gráfico
+        setPrices([]); // Limpiar tabla y grafico
       }
     }, [query]);
     
     const bestPrice = prices.length ? prices.reduce((a,b)=> a.precio < b.precio ? a : b) : null;
 
     return(
-      <div>
+      <>
         <header className="header">
           <div className="header-titulo">
             <h1>Comparador de Precios (Chile)</h1>
@@ -54,7 +54,7 @@ function App() {
             <span className="header-subtitulo-texto">Aquí encontraras el precio de los juegos entre las diversas tiendas (Steam, Epic, entre otros). </span>
           </div>
           <div className="test-txt">
-            <span>(Versión de <strong>Pruebas</strong>)</span>
+            <span>(Versión de <strong>Pruebas</strong> — contenido aún en evaluación)</span>
           </div>
         </header>
         
@@ -69,7 +69,7 @@ function App() {
                   <img className='item-img'></img>
                   <h3 className='item-title'>Cyberpunk 2077</h3>
                   <h3 className='item-price'>$11111</h3>
-                  <button>Ver mas</button>
+                  <button>Ver detalles</button>
 
                 </div>
               </li>
@@ -83,6 +83,8 @@ function App() {
               </div>
 
               <div className="buscar-juego-input">
+                
+
                 <input
                   list="juegos-sugerencias"
                   value={query}
@@ -99,7 +101,7 @@ function App() {
                       e.target.blur(); // cerrar el datalist
                     }
                   }}
-                  placeholder="Escribe el nombre de un juego..."
+                  placeholder="Escribe el nombre de un juego."
                   className="w-full p-2 border rounded mb-3"
                   autoComplete="off"
                 />
@@ -246,7 +248,7 @@ function App() {
                     
                   </>
                 ) : (
-                  <div>No hay precios registrados para este juego.</div>
+                  <div>Aún no hay precios registrados para este juego.</div>
                 )}
               </div>
             )}
@@ -259,10 +261,10 @@ function App() {
           
           <section className= "sobre-nosotros">
               <div className="disclaimer">
-                <span className="disclaimer-text">**Datos recolectados de APIs de terceros. No afiliado a Steam/Epic ni los distribuidores mostrados. Los precios pueden variar según el cambio de moneda.</span>
+                <span className="disclaimer-text">**Datos recolectados de APIs de terceros. No estamos afiliados a Steam, Epic Games ni a los distribuidores mostrados. Los precios pueden variar según el cambio de moneda.</span>
               </div>
               <div className= "rrss">
-                <h4 className= "Titulo-2"> Nuestras Redes</h4>
+                <h4 className= "Titulo-2"> Siguenos</h4>
                 <ul>
                   <li>
                     <img loading="lazy" className="rrss_img" alt="yt_icon" src="/youtube_icon.png"></img>
@@ -271,7 +273,7 @@ function App() {
               </div>
               <div className="contacto">
                 <h4 className="Titulo-2">Contacto</h4>
-                <p>Si tienes dudas, o presentas problemas con la página. No dudes en contactarnos por los siguientes medios:</p>
+                <p>¿Tienes dudas o presentas problemas con la página? No dudes en contactarnos por los siguientes medios:</p>
                 <ul>
                   <li>Email:</li>
                 </ul>
@@ -283,7 +285,7 @@ function App() {
           <span className="copyright">Todos los derechos reservados, 2025</span>
           
         </footer>
-      </div>
+      </>
     );
   
 }

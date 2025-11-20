@@ -42,7 +42,7 @@ main{
 }
 section{
     margin: 1rem 0;
-    background-color: v.$color_terciario;
+    background: v.$color_bsec2;
     font-family: "Montserrat", "sans-serif";
 
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.39);
@@ -91,7 +91,7 @@ section{
         align-items: center;
         
         width: 100%;
-        background-color:  v.$color_principal;
+        background-color:  v.$color_bsec1;
         
         gap: 1rem;
         @include m.w-telefono{

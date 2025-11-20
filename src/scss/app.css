@@ -331,7 +331,7 @@ template {
   justify-content: center;
   flex-direction: column;
   color: white;
-  background-color: #494FC1;
+  background: #062A34;
   text-align: center;
   height: 4rem;
   font-size: 1.6rem;
@@ -373,7 +373,7 @@ template {
   margin: 0 auto;
   font-size: 2rem;
   font-family: "Montserrat", "sans-serif";
-  background-color: #0B4F62;
+  background-color: #062A34;
   overflow: hidden; /* Oculta el texto que se sale del contenedor */
   white-space: nowrap; /* Evita que el texto salte de línea */
   width: 75%; /* Ancho del contenedor */
@@ -422,7 +422,7 @@ main {
 
 section {
   margin: 1rem 0;
-  background-color: #ABE5F5;
+  background: #B7E5CD;
   font-family: "Montserrat", "sans-serif";
   box-shadow: 4px 8px 8px hsla(0, 0%, 0%, 0.39);
 }
@@ -465,7 +465,7 @@ section h2 {
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: #494FC1;
+  background-color: #0B4F62;
   gap: 1rem;
   border-radius: 0.5rem 0.5rem 0 0;
   width: auto;
@@ -741,4 +741,8 @@ a {
 }
 .juegos-recomendados .item-card h3 {
   margin: 0 auto;
+}
+
+.main {
+  background: #E9F4F1;
 }/*# sourceMappingURL=app.css.map */
